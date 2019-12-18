@@ -6,6 +6,8 @@
 	</head>
 	<style type="text/css">
 		body{
+			padding: 0px;
+			margin: 0px;
 			font-size: 60px;
 			background-color: #4169E1;
 			}
@@ -31,7 +33,7 @@
 				 margin: auto;
 			}
 			img{
-				margin-top: 100px;
+				margin: 70px auto 0;
 				width: 400px;
 				height: 400px;
 				}
@@ -60,7 +62,7 @@
 			<div>2 选择在浏览器中打开</div>
 		</div>
 	<div class="contain">
-		<img style="-webkit-user-select: none;cursor: zoom-in;" src="http://119.23.70.99:99/images/logo.png" width="479" height="441">
+		<img src="http://119.23.70.99:99/images/logo.png" width="479" height="441">
 		<p>
 			  福清双保APP是集政务服务、便民服务、监督制度于一体的政务服务软件平台
 			
@@ -87,8 +89,8 @@
 				modelTip.style.display='block';
 		    } else {
 		        // alert("不是来自微信内置浏览器")
-				//var modelTip = document.getElementById("modelTip");
-				//modelTip.style.display='block';
+				var modelTip = document.getElementById("modelTip");
+				modelTip.style.display='block';
 		   
 			}
 	</script>
