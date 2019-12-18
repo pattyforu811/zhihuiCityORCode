@@ -14,7 +14,7 @@
 			#modelTip{
 				background-color: #2F4F4F;
 				color: white;
-				padding: 0 0 40px 40px;
+				padding: 0 0 40px 60px;
 				display: none;
 			}
 			#direction{
@@ -32,8 +32,8 @@
 				text-align: center;
 				 margin: auto;
 			}
-			img{
-				margin: 70px auto 0;
+			#logo{
+				margin: 60px auto 0;
 				width: 400px;
 				height: 400px;
 				}
@@ -56,13 +56,16 @@
 	<body>
 		<div id="modelTip">
 			<div id="direction">
-				<svg t="1576635440807" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6444" width="200" height="200"><path d="M780.8 224l-579.2 579.2c-12.8 12.8-12.8 32 0 44.8 12.8 12.8 32 12.8 44.8 0l572.8-572.8v492.8c0 19.2 12.8 32 32 32s32-12.8 32-32v-544c0-35.2-28.8-64-64-64h-544c-19.2 0-32 12.8-32 32s12.8 32 32 32h505.6z" p-id="6445" fill="#ffffff"></path></svg>
+				<svg t="1576635440807" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6444" width="180" height="180"><path d="M780.8 224l-579.2 579.2c-12.8 12.8-12.8 32 0 44.8 12.8 12.8 32 12.8 44.8 0l572.8-572.8v492.8c0 19.2 12.8 32 32 32s32-12.8 32-32v-544c0-35.2-28.8-64-64-64h-544c-19.2 0-32 12.8-32 32s12.8 32 32 32h505.6z" p-id="6445" fill="#ffffff"></path></svg>
 			</div>
 			<div>1 点击右上角的<svg t="1576634642497" class="icon iconspot" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4371" width="60" height="60"><path d="M213.333333 597.333333a85.333333 85.333333 0 1 1 85.333334-85.333333 85.333333 85.333333 0 0 1-85.333334 85.333333z m0-136.533333a51.2 51.2 0 1 0 51.2 51.2 51.413333 51.413333 0 0 0-51.2-51.2zM512 597.333333a85.333333 85.333333 0 1 1 85.333333-85.333333 85.333333 85.333333 0 0 1-85.333333 85.333333z m0-136.533333a51.2 51.2 0 1 0 51.2 51.2 51.413333 51.413333 0 0 0-51.2-51.2zM810.666667 597.333333a85.333333 85.333333 0 1 1 85.333333-85.333333 85.333333 85.333333 0 0 1-85.333333 85.333333z m0-136.533333a51.2 51.2 0 1 0 51.2 51.2 51.413333 51.413333 0 0 0-51.2-51.2z" p-id="4372" fill="#2c2c2c"></path></svg>按钮</div>
 			<div>2 选择在浏览器中打开</div>
 		</div>
 	<div class="contain">
-		<img src="http://119.23.70.99:99/images/logo.png" width="479" height="441">
+		<div id="logo">
+			<img src="http://119.23.70.99:99/images/logo.png" width="479" height="441">
+		</div>
+		
 		<p>
 			  福清双保APP是集政务服务、便民服务、监督制度于一体的政务服务软件平台
 			
@@ -89,8 +92,8 @@
 				modelTip.style.display='block';
 		    } else {
 		        // alert("不是来自微信内置浏览器")
-				var modelTip = document.getElementById("modelTip");
-				modelTip.style.display='block';
+				//var modelTip = document.getElementById("modelTip");
+				//modelTip.style.display='block';
 		   
 			}
 	</script>
