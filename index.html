@@ -55,28 +55,59 @@
 			background-color: white;
 			border-radius: 15px;
 		}
-		#modelIphne{
+		
+		#modelIphneContain{
+		overflow: hidden;
+			height: 0px;
 			position: absolute;
-			/* background-color: #2F4F4F; */
-			/* background: rgba(0, 0, 0, 0.4); */
 			left: 0%;
-			top: 38%;
-			color: white;
-			display: none;
-			width: 100%;
+			top: 52%;
+			opacity: 0.88;
 			z-Index: 9999;
-			/* filter: alpha(opacity=60); */
+font-size: 0;
+		}
+		
+		#div2{
+			width:0;
+			height:0;
+			border-right:50px solid transparent;
+			border-left:50px solid transparent;
+			border-bottom:89.3px solid pink;
+		/* 	position: absolute;
+			left: 45%;
+			top: 51%;		
+				z-Index: 9999; */
+/* 			opacity: 0.88; */
+margin: auto;
+			}
+		
+		#modelIphne{
+		/* 	position: absolute;
+			left: 0%;
+			top: 56%;
+			color: white;
+		
+			overflow: hidden;
+			z-Index: 9999; */
 			/*设置透明度为60%*/
-			opacity: 0.6;
+			/* opacity: 0.88; */
 			/*非IE浏览器下设置透明度为60%*/
 			text-align: right;
 			line-height: 80px;
 			text-align: justify;
 			text-indent: 100px;
+			font-size: 40px;
+			
+		
+		
 		}
 	#modelIphne p{
 		margin: 0 17%;
-		color: white;
+		color: rgba(0, 0, 0, 0.8);
+		background-color: pink;
+		border: 1px solid;
+		border-radius: 1.5625rem;
+		padding: 10px 25px;
 	}
 
 		.contain {
@@ -87,7 +118,7 @@
 
 
 		#logo {
-			margin: 120px auto 100px;
+			margin: 100px auto 100px;
 			width: 350px;
 			height: 350px;
 			text-align: center;
@@ -98,7 +129,7 @@
 			font-size: 50px;
 			color: white;
 			font-family:   FZYaSongS-B-GB;
-			margin: 30px auto  40px;
+			margin: 30px auto  20px;
 			display: block;
 		}
 		
@@ -117,6 +148,10 @@
 			padding: 10px 70px;
 			border-radius: 15px;
 			border: 0px solid #008000;
+		}
+		
+		#btn1{
+			margin-top: 265px;
 		}
 	</style>
 
@@ -139,7 +174,11 @@
 			<div>下载应用</div>
 		</div>
 		<!-- 苹果提示框 -->
-		<div id="modelIphne"><p>苹果无法直接下载，请进入苹果商城App store搜索 "福清智慧城市规划管理大脑" 即可下载</p></div>
+		<div id ="modelIphneContain">
+			<div id="div2"></div>
+			<div id="modelIphne"><p>苹果无法直接下载，请进入苹果商城App store搜索 "福清智慧城市规划管理大脑" 即可下载</p></div>
+		</div>
+		
 		<div class="contain">
 			<div id="logo">
 				<img src="img/logo.png" width="350" height="350">
@@ -149,7 +188,7 @@
 			</div>
 
 
-			<button id="down" type="button" onclick="iphoneTips()"><svg t="1576645732104" class="icon" viewBox="0 0 1024 1024"
+			<button id="btn1" type="button" onclick="iphoneTips()"><svg t="1576645732104" class="icon" viewBox="0 0 1024 1024"
 				 version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3423" width="65" height="65">
 					<path d="M649.785306 161.506856C707.566241 88.169516 694.232179 8.165145 689.787492 1.498114c-6.667031-6.667031-93.338433 6.667031-153.341711 86.671402-53.336247 73.33734-53.336247 153.341711-46.669217 160.008742C496.443594 254.845289 583.114997 248.178259 649.785306 161.506856L649.785306 161.506856zM649.785306 161.506856M794.237643 534.860588c-6.667031-106.672495 93.338433-173.342804 113.339526-186.676866l0-6.667031c0 0-86.671402-106.672495-213.34499-100.005464-80.004371 6.667031-120.006557 46.669217-173.342804 46.669217-66.67031 0-126.673588-46.669217-200.010928-46.669217-60.003278 0-233.346082 53.336247-246.680145 280.015299C63.086584 748.205579 223.095326 959.328225 283.098605 999.330411c60.003278 40.002186 100.005464 26.668124 166.675774-6.667031 33.335154-20.001093 140.00765-26.668124 200.010928 13.334062 73.33734 26.668124 180.009835 6.667031 300.016392-260.014206C934.245292 748.205579 800.904674 714.870423 794.237643 534.860588L794.237643 534.860588zM794.237643 534.860588"
 					 p-id="3424" fill="#ffffff"></path>
@@ -179,8 +218,12 @@
 		function iphoneTips() {
 			var cover = document.getElementById("cover");
 			cover.style.display = "block"; //显示遮罩层
-			var modelIphne = document.getElementById("modelIphne");
+			var modelIphne = document.getElementById("modelIphneContain");
 			modelIphne.style.display="block";//显示弹出层
+			
+			modelIphne.style.transition = "all 1s";
+			// setTimeout(modelIphne.style.height= "274px",1000);
+			modelIphne.style.height= "417px";
 		}
 		
 		//安卓提示框
@@ -208,11 +251,14 @@
 			//安卓提示框
 			var modelTip = document.getElementById("modelTip");
 			//苹果提示框
-			var modelIphne = document.getElementById("modelIphne");
+			var modelIphne = document.getElementById("modelIphneContain");
 			if(modelTip.style.display == "block"){
 				modelTip.style.display = "none"
 			}else{
-				modelIphne.style.display="none"
+				// modelIphne.style.display="none"
+				modelIphne.style.transition = "all 0s";
+				modelIphne.style.height= "0px";
+				
 			}
 		}
 		
